@@ -1,2 +1,4 @@
 # hello-world
-an example repository
+an another repository branch based on master.
+Hi whz.
+best regards.
