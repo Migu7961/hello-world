@@ -1,0 +1,24 @@
+## 共用配置，由于所有服务都整合了rabbitmq，所以将其放在这里。
+sleuth:
+    sampler:
+      percentage: 1.0
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          zk-nodes: 172.30.150.42:2184
+          brokers: 172.30.150.42:9094
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10 ##心跳检测时长
+    prefer-ip-address: true
+  client:
+    registryFetchIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 5
+    initialInstanceInfoReplicationIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://eureka-hs.default.svc.cluster.local:8761/eureka/
+management:
+  security:
+    enabled: false
